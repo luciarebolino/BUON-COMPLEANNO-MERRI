@@ -6,140 +6,257 @@
   <title>Ciao</title>
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
       background: #ff00bf;
       text-align: center;
-      padding: 2em;
-    }
-
-    .avatar {
-      display: inline-block;
-      margin: 1em;
-      cursor: pointer;
-      white-space: pre;
-      text-align: left;
-      color: white;
-    }
-
-    .name {
-      text-align: center;
-      color: white;
-      font-size: 0.9em;
-      margin-top: 0.3em;
+      padding: 1em;
+      margin: 0;
     }
 
     h1 {
       color: white;
+      font-size: 1.2em;
+      margin: 1em 0;
+    }
+
+    #avatars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      justify-content: center;
+      align-content: center;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .avatar {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 0.5em;
+      font-size: 0.7em;
+      white-space: pre-wrap;
+      color: white;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .name {
+      margin-top: 0.4em;
+      font-size: 0.85em;
+    }
+
+    .message-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
     }
 
     .message-box {
-      margin-top: 3em;
-      font-size: 1.2em;
-      color: white;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      background: white;
+      color: black;
+      padding: 1em;
+      border-radius: 10px;
+      max-width: 90%;
+      font-size: 1em;
       white-space: pre-line;
+      position: relative;
     }
+
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 1.2em;
+      cursor: pointer;
+      color: #ff00bf;
+    }
+
+    @media (max-width: 480px) {
+      .avatar {
+        font-size: 0.65em;
+      }
+
+      .name {
+        font-size: 0.75em;
+      }
+
+      .message-box {
+        font-size: 0.95em;
+      }
+    }
+
+    .frame {
+  position: fixed;
+  color: white;
+  font-size: 0.7em;
+  font-family: monospace;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.frame-top {
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.frame-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-bottom: 2px;
+}
+
+.frame-left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  text-align: center;
+  padding-left: 2px;
+}
+
+.frame-right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  text-align: center;
+  padding-right: 2px;
+}
+
   </style>
 </head>
 <body>
-  <h1>30303030303030 Buon Compleanno Amica!  30303030303030</h1>
+
+  <h1>Buon Compleanno Amica! </h1>
+  <div class="frame frame-top">30303030303030300303030303030303030303030303030303030303030303030303303030303030303030303030303030303030303030</div>
+<div class="frame frame-bottom">30303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030</div>
+<div class="frame frame-left">3030300303030030030303030303030303030303033030303030303030303030330303030303030303033030303030303030303030303030303030303030</div>
+<div class="frame frame-right">303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030</div>
+
 
   <div id="avatars">
     <div class="avatar" onclick="showHint(this)" data-hint="Svuota l’agenda, lascia ogni trama,
 dal 4 al 6 Luglio si carica il karma.
 Nessuna domanda, nessuna meta—
 fingi sorpresa, sorridi, e aspetta.">
-   
-     __🧢__
-    (o __ o)
-  🎒 /|\\___/|
-   //     \\
-  (_|     |_)
-    <div class="name">Luci</div>
-    </div>
+ __🧢__
+(o __ o)
+🎒 /|\\___/|
+ //     \\
+(_|     |_)
+<div class="name">Luci</div>
+</div>
 
     <div class="avatar" onclick="showHint(this)" data-hint="Fai la valigia, ma tienila vuota,
 il sole ti cuoce, la lingua è remota.
 Brindisi lenti, parole in fumo,
 parlare è un lusso, qui basta il profumo.">
-      \o/
-       🕶️       ☀️  
-     / | \
-    /  |  \
-   /   |   \
-      / \
-     /___\
-    <div class="name">Rachi</div>
-    </div>
+ \o/
+  🕶️   ☀️  
+ / | \
+/  |  \
+/   |   \
+   / \
+  /___\
+<div class="name">Rachi</div>
+</div>
 
     <div class="avatar" onclick="showHint(this)" data-hint="Odore di mare, limone e mistero,
 scelte sbagliate a passo sincero.
 Pesce al mattino, silenzi d’autore,
 la notte ci prende con tutto il suo cuore.">
-     (•‿•)
-     /|_|🎣
-    / |  
-   /__\  
-   || ||
-  (_)(_)
-    <div class="name">Marghe</div>
-    </div>
+ (•‿•)
+ /|_|🎣
+/ |  
+/__\  
+|| ||
+(_)(_)
+<div class="name">Marghe</div>
+</div>
 
     <div class="avatar" onclick="showHint(this)" data-hint="C’è un vulcano che sbuffa lontano,
 ma sei tu l’eruzione, con drink nella mano.
 Tra pietra nera e passi storti,
 le salite ti faranno i pensieri contorti.">
-       \\        🍋
-      \\╭( ͡° ͜ʖ ͡°)╯
-       ┃ ┃
-     _/   \_
-    <div class="name">Agne</div>
-    </div>
+  \\   🍋
+ \\╭( ͡° ͜ʖ ͡°)╯
+  ┃ ┃
+_/   \_
+<div class="name">Agne</div>
+</div>
 
     <div class="avatar" onclick="showHint(this)" data-hint="Ogni tutto finisce con un tuffo o un sorso,
 ciabatte smarrite, risate di corso.
 Se scivoli dentro, nessun problema davvero:
 qui ogni caduta diventa un pensiero.">
-      /^\\
-     (O_O)
-    /|   |\\
-   //|___|\\\\
-   \\/   \\/
-    ||   ||
-    🩴    🩴
-    <div class="name">Fra R.</div>
-    </div>
+  /^\\
+ (O_O)
+/|   |\\
+//|___|\\\\
+\\/   \\/
+||   ||
+🩴  🩴
+<div class="name">Fra R.</div>
+</div>
 
     <div class="avatar" onclick="showHint(this)" data-hint="Trent’anni non contano, si fanno sparendo,
 tra amiche che urlano e sogni in crescendo.
 Un viaggio sbandato, ridendo e sudando,
 che inizia con “dove?” e finisce cantando.">
-      (\_/)
-     ( •_•)
-    / >🍧
-    <div class="name">Fra S.</div>
-    </div>
+ (\_/)
+( •_•)
+/ >🍧
+<div class="name">Fra S.</div>
+</div>
 
     <div class="avatar" onclick="showHint(this)" data-hint="Non chiedere dove, non fare la svelta,
-    lo scoprirai con la fronte già sciolta.
-    Gin nella mano, sole sul petto—
-    e il primo dubbio sarà perfetto.">
-         /\_/\
-        ( o.o )
-         > ^ <
-        <div class="name">Vale</div>
-        </div>
-      </div>
+lo scoprirai con la fronte già sciolta.
+Gin nella mano, sole sul petto—
+e il primo dubbio sarà perfetto.">
+ /\_/\
+( o.o )
+ > ^ <
+<div class="name">Vale</div>
+</div>
 
+    <!-- Spazi vuoti per riempire la 3x3 -->
+    <div></div>
+    <div></div>
+  </div>
 
-  <div class="message-box" id="message-box">Schiacciaci per parlarci!</div>
+  <div class="message-overlay" id="message-overlay">
+    <div class="message-box">
+      <button class="close-btn" onclick="hideHint()">×</button>
+      <div id="message-text">Testo</div>
+    </div>
+  </div>
 
   <script>
     function showHint(element) {
       const hint = element.getAttribute("data-hint");
-      document.getElementById("message-box").innerText = hint;
+      document.getElementById("message-text").innerText = hint;
+      document.getElementById("message-overlay").style.display = 'flex';
+    }
+
+    function hideHint() {
+      document.getElementById("message-overlay").style.display = 'none';
     }
   </script>
 </body>
