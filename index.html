@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciao</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ff00bf;
+      text-align: center;
+      padding: 2em;
+    }
+
+    .avatar {
+      display: inline-block;
+      margin: 1em;
+      cursor: pointer;
+      white-space: pre;
+      text-align: left;
+      color: white;
+    }
+
+    .name {
+      text-align: center;
+      color: white;
+      font-size: 0.9em;
+      margin-top: 0.3em;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    .message-box {
+      margin-top: 3em;
+      font-size: 1.2em;
+      color: white;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <h1>30303030303030 Buon Compleanno Amica!  30303030303030</h1>
+
+  <div id="avatars">
+    <div class="avatar" onclick="showHint(this)" data-hint="Svuota l’agenda, lascia ogni trama,
+dal 4 al 6 Luglio si carica il karma.
+Nessuna domanda, nessuna meta—
+fingi sorpresa, sorridi, e aspetta.">
+   
+     __🧢__
+    (o __ o)
+  🎒 /|\\___/|
+   //     \\
+  (_|     |_)
+    <div class="name">Luci</div>
+    </div>
+
+    <div class="avatar" onclick="showHint(this)" data-hint="Fai la valigia, ma tienila vuota,
+il sole ti cuoce, la lingua è remota.
+Brindisi lenti, parole in fumo,
+parlare è un lusso, qui basta il profumo.">
+      \o/
+       🕶️       ☀️  
+     / | \
+    /  |  \
+   /   |   \
+      / \
+     /___\
+    <div class="name">Rachi</div>
+    </div>
+
+    <div class="avatar" onclick="showHint(this)" data-hint="Odore di mare, limone e mistero,
+scelte sbagliate a passo sincero.
+Pesce al mattino, silenzi d’autore,
+la notte ci prende con tutto il suo cuore.">
+     (•‿•)
+     /|_|🎣
+    / |  
+   /__\  
+   || ||
+  (_)(_)
+    <div class="name">Marghe</div>
+    </div>
+
+    <div class="avatar" onclick="showHint(this)" data-hint="C’è un vulcano che sbuffa lontano,
+ma sei tu l’eruzione, con drink nella mano.
+Tra pietra nera e passi storti,
+le salite ti faranno i pensieri contorti.">
+       \\        🍋
+      \\╭( ͡° ͜ʖ ͡°)╯
+       ┃ ┃
+     _/   \_
+    <div class="name">Agne</div>
+    </div>
+
+    <div class="avatar" onclick="showHint(this)" data-hint="Ogni tutto finisce con un tuffo o un sorso,
+ciabatte smarrite, risate di corso.
+Se scivoli dentro, nessun problema davvero:
+qui ogni caduta diventa un pensiero.">
+      /^\\
+     (O_O)
+    /|   |\\
+   //|___|\\\\
+   \\/   \\/
+    ||   ||
+    🩴    🩴
+    <div class="name">Fra R.</div>
+    </div>
+
+    <div class="avatar" onclick="showHint(this)" data-hint="Trent’anni non contano, si fanno sparendo,
+tra amiche che urlano e sogni in crescendo.
+Un viaggio sbandato, ridendo e sudando,
+che inizia con “dove?” e finisce cantando.">
+      (\_/)
+     ( •_•)
+    / >🍧
+    <div class="name">Fra S.</div>
+    </div>
+
+    <div class="avatar" onclick="showHint(this)" data-hint="Non chiedere dove, non fare la svelta,
+    lo scoprirai con la fronte già sciolta.
+    Gin nella mano, sole sul petto—
+    e il primo dubbio sarà perfetto.">
+         /\_/\
+        ( o.o )
+         > ^ <
+        <div class="name">Vale</div>
+        </div>
+      </div>
+
+
+  <div class="message-box" id="message-box">Schiacciaci per parlarci!</div>
+
+  <script>
+    function showHint(element) {
+      const hint = element.getAttribute("data-hint");
+      document.getElementById("message-box").innerText = hint;
+    }
+  </script>
+</body>
+</html>
